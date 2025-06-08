@@ -1,0 +1,470 @@
+/* Profile Style */
+.profile-hero {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container {
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.profile-avatar {
+    position: relative;
+    margin-right: 25px;
+}
+
+.profile-avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.avatar-edit {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.edit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-icon:hover {
+    background: #555;
+    transform: scale(1.1);
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.member-since {
+    opacity: 0.8;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.profile-actions {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-edit {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-edit:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.profile-content {
+    padding: 30px;
+}
+
+.profile-section {
+    margin-bottom: 40px;
+}
+
+.profile-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-section h3 i {
+    font-size: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-item label {
+    display: block;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.info-item p {
+    margin: 0;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.preferences {
+    display: grid;
+    gap: 20px;
+}
+
+.preference-item {
+    display: flex;
+    gap: 15px;
+}
+
+.preference-icon {
+    font-size: 24px;
+    color: #333;
+    margin-top: 3px;
+}
+
+.brand-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.brand-tag {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Edit Mode Styles */
+.profile-edit .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-edit label {
+    display: block;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.profile-edit .form-control {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border 0.3s ease;
+}
+
+.profile-edit .form-control:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.brand-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.brand-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-cancel, .btn-save {
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.btn-cancel:hover {
+    background: #e9ecef;
+}
+
+.btn-save {
+    background: #333;
+    color: white;
+    border: none;
+}
+
+.btn-save:hover {
+    background: #555;
+}
+
+/* Order History */
+.order-history {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order-item {
+    border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-id {
+    font-weight: 600;
+}
+
+.order-date {
+    color: #666;
+}
+
+.order-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.order-status.completed {
+    background: #e6f7ee;
+    color: #28a745;
+}
+
+.order-status.processing {
+    background: #fff8e6;
+    color: #ffc107;
+}
+
+.order-status.cancelled {
+    background: #fee;
+    color: #dc3545;
+}
+
+.order-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+.order-products {
+    display: grid;
+    gap: 15px;
+}
+
+.product-item {
+    display: flex;
+    gap: 15px;
+}
+
+.product-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.product-info h5 {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+}
+
+.product-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.order-summary {
+    display: grid;
+    gap: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-item.total {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+    font-weight: 600;
+}
+
+.order-footer {
+    padding: 15px 20px;
+    text-align: right;
+    background: #f8f9fa;
+}
+
+.btn-view-order {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.btn-view-order:hover {
+    color: #555;
+}
+
+.no-orders {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-orders i {
+    font-size: 40px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.no-orders p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-shop {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #333;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-shop:hover {
+    background: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .order-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.profile-view, .profile-edit {
+    animation: fadeIn 0.5s ease;
+}
+.btn-register:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-register .btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn-register:disabled .btn-icon {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

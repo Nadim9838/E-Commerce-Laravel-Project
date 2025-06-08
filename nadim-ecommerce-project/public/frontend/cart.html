@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <!-- Header -->
+  <div class="upperheader">
+    <div class="container">
+      <div class="upperheader-box">
+        <div class="socialmedia-upper">
+          <a href="#"><i class="fa-brands fa-whatsapp"></i>+91 97824 73777</a>
+          <a href="#"><i class="fa-regular fa-envelope"></i>titanbharatpur@gmail.com</a>
+        </div>
+        <div class="socialmedia-upper">
+          <a href="#"><i class="fa-solid fa-location-dot"></i>Find a Store</a>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <header class="navbar">
+    <button class="hamburger" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+    <div class="logo"><a href="#"><img src="images/c2 logo 2-01.png" alt=""></a></div>
+    <nav class="menu" id="navMenu">
+      <ul>
+        <li><a href="#">Brands<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Accessories<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Watch Finder<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Smart Watch<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Special Offer<i class="fa-solid fa-angle-down"></i></a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <!-- Watchlist Icon -->
+       <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button id="watchlistBtn"><i class="fa-solid fa-heart"></i></button>
+      <!-- Cart Icon -->
+      <button id="cartBtn" title="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <!-- Modal -->
+      <!-- Cart Modal -->
+      <div id="cartModal" class="modal">
+        <div class="modal-content">
+          <span class="closeBtn"><i class="fa-solid fa-xmark"></i></span>
+          <h2>Shopping Cart</h2>
+          <!-- Product Item -->
+          <div class="cart-item">
+            <img src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+            <div class="item-details">
+              <h4>BALMAIN Classic R B41013162 Watch for Men</h4>
+              <p>₹ 45,200</p>
+              <div class="qty-remove">
+                <div class="quantity-control">
+                  <button>-</button>
+                  <span>3</span>
+                  <button>+</button>
+                </div>
+                <a href="#">Remove</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="cart-footer">
+            <div class="extras">
+              <div><i class="fa-solid fa-pen"></i> Note</div>
+              <div><i class="fa-solid fa-ticket"></i> Coupon</div>
+            </div>
+            <div class="subtotal">
+              <span>Subtotal</span>
+              <strong>₹ 135,600</strong>
+            </div>
+            <button class="checkout-btn">Check out</button>
+            <a href="#" class="view-cart-link">View Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-dropdown-wrapper">
+        <button id="profileBtn" title="Profile">
+          <i class="fa-solid fa-user"></i>
+        </button>
+        <div class="profile-dropdown" id="profileDropdown">
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="searchBar" class="hidden">
+    <input type="text" placeholder="Search..." />
+  </div>
+  <div id="watchlist" class="hidden">
+    <p>Watchlist is empty.</p>
+  </div>
+  <!-- Header end -->
+  <div class="watch-page">
+        <div class="watch-gallery">
+            <div class="watch-thumbs">
+                <img src="images/banner--1.jpg" onclick="changeImage(this)" alt="Thumb 1">
+                <img src="images/banner--2.jpg" onclick="changeImage(this)" alt="Thumb 2">
+                <img src="images/banner--3.jpg" onclick="changeImage(this)" alt="Thumb 3">
+                <img src="images/banner--4.jpg" onclick="changeImage(this)" alt="Thumb 4">
+            </div>
+            <div class="watch-main">
+                <img id="mainWatchImage" src="images/banner--1.jpg" alt="Main Product">
+            </div>
+        </div>
+
+        <div class="watch-details">
+            <h2>Fastrack Stunners Quartz Rose Gold Watch</h2>
+            <p class="watch-desc">
+                This Tommy Hilfiger watch strap is made of metal and is attached to the watch by pushpins...
+            </p>
+            <ul class="watch-meta">
+                <li><span>Brand:</span> EcomZone</li>
+                <li><span>Condition:</span> New</li>
+                <li><span>Reference:</span> WUI-UOW-778</li>
+                <li><span>Available in Stock:</span> <span class="stock-in">145 Items</span></li>
+            </ul>
+            <div class="watch-size">
+                <span>Size:</span>
+                <button>Small</button>
+                <button>Medium</button>
+                <button class="active">Large</button>
+            </div>
+
+            <div class="watch-price">$50.00</div>
+            <p class="watch-delivery">Est. Delivery Time 2-3 Days</p>
+
+            <div class="watch-actions">
+                <input type="number" value="1" min="1">
+                <button class="watch-cart-btn">ADD TO CART</button>
+            </div>
+        </div>
+  </div>
+  <!-- tabs -->
+  <div class="container">
+    <div class="custom-tab-container">
+    <button class="custom-tab-button" onclick="openCustomTab(event, 'CustomTab1')" id="defaultCustomTab">Description</button>
+    <button class="custom-tab-button" onclick="openCustomTab(event, 'CustomTab2')">Product Details</button>
+    <button class="custom-tab-button" onclick="openCustomTab(event, 'CustomTab3')">Size Guide</button>
+    <button class="custom-tab-button" onclick="openCustomTab(event, 'CustomTab4')">Shipping & Return</button>
+    <button class="custom-tab-button" onclick="openCustomTab(event, 'CustomTab5')">Custom Tab</button>
+  </div>
+
+  <div id="CustomTab1" class="custom-tab-panel">
+    <h3>About this item</h3>
+    <p>Perfect to top all modern and contemporary looks, the Vintage timepiece has a durable chrome-plated case and bezel. Vintage is curated to make your retro genres and styles stand out from all generic and boring lifestyles. Paving your way in the dark and busy roads, the micro-light in the watch lights up the dial at the click of a button. With a magical charm, Vintage makes sure your hustle-filled life flows smoothly.</p>
+    <p>Gaining the flawless and perfect outfit everyday has never been easier than before. The perfect fit for the perfect style, the adjustable clasp on this classic timepiece secures your ultimate appearance.</p>
+    <img src="images/products-banner-1.jpg" alt="">
+    
+  </div>
+
+  <div id="CustomTab2" class="custom-tab-panel">
+    <div class="card-wrapper">
+    <img src="images/5.jpg" alt="Chopard Logo" class="logo-img">
+
+    <div class="product-meta">
+      <p><strong>Reference:</strong> WEI-FSK-353</p>
+      <p><strong>Condition:</strong> <span class="status-new">New</span></p>
+      <p><strong>In stock:</strong> <span class="stock-qty">645 Items</span></p>
+    </div>
+
+    <h2 class="sheet-heading">Data Sheet</h2>
+
+    <div class="details-table">
+      <div class="table-row"><span class="label">Composition</span><span class="value">Ceramic</span></div>
+      <div class="table-row"><span class="label">Property</span><span class="value">Removable cover</span></div>
+      <div class="table-row"><span class="label">Item Model Number</span><span class="value">KBL-T500BT</span></div>
+      <div class="table-row"><span class="label">Product Dimensions</span><span class="value">120cm x 100cm x 140cm</span></div>
+      <div class="table-row"><span class="label">Box Weight</span><span class="value">1.9 kg</span></div>
+      <div class="table-row"><span class="label">Container Type</span><span class="value">Plastic Shrink Wrap</span></div>
+      <div class="table-row"><span class="label">Country Of Origin</span><span class="value">Russia</span></div>
+    </div>
+  </div>
+
+  </div>
+
+  <div id="CustomTab3" class="custom-tab-panel">
+    <div class="size-chart-container">
+    <p class="description">
+      Finding the perfect fit is essential for a comfortable and flattering wardrobe. To assist you in selecting the right size, we have compiled comprehensive size guides for both men's and women's clothing. Please refer to the following information to ensure a perfect fit every time.
+    </p>
+
+    <table class="size-table">
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Chest (inches)</th>
+          <th>Waist (inches)</th>
+          <th>Hips (inches)</th>
+          <th>Neck (inches)</th>
+          <th>Sleeve Length (inches)</th>
+          <th>Inseam (inches)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>XS</td><td>34-36</td><td>28-30</td><td>34-36</td><td>14.5-15</td><td>32-33</td><td>30-31</td></tr>
+        <tr><td>S</td><td>36-38</td><td>30-32</td><td>36-38</td><td>15-15.5</td><td>33-34</td><td>31-32</td></tr>
+        <tr><td>M</td><td>38-40</td><td>32-34</td><td>38-40</td><td>15.5-16</td><td>34-35</td><td>32-33</td></tr>
+        <tr><td>L</td><td>40-42</td><td>34-36</td><td>40-42</td><td>16-16.5</td><td>35-36</td><td>33-34</td></tr>
+        <tr><td>XL</td><td>42-44</td><td>36-38</td><td>42-44</td><td>16.5-17</td><td>36-37</td><td>34-35</td></tr>
+        <tr><td>XXL</td><td>44-46</td><td>38-40</td><td>44-46</td><td>17-17.5</td><td>37-38</td><td>35-36</td></tr>
+        <tr><td>XXXL</td><td>46-48</td><td>40-42</td><td>46-48</td><td>17.5-18</td><td>38-39</td><td>36-37</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+
+  <div id="CustomTab4" class="custom-tab-panel">
+   <div class="info-box-shipret">
+    <h2 class="head-shipret">Shipping policy</h2>
+    <p class="para-shipret">At our Company, we understand the importance of timely delivery. We offer a variety of shipping options to suit your needs, including standard, expedited, and express shipping. Our dedicated team works diligently to process and dispatch your orders promptly, aiming to deliver them to your doorstep within the estimated timeframe.</p>
+
+    <p class="para-shipret">We strive to provide fast and reliable shipping to our customers. Here's everything you need to know about our shipping process:</p>
+
+    <ul class="list-shipret">
+      <li>Dispatch: Within 24 Hours</li>
+      <li>Free shipping across all products on a minimum purchase of $99.</li>
+      <li>International delivery time 5 to 7 business days</li>
+      <li>Cash on delivery might be available</li>
+      <li>Easy 30 days returns and exchanges</li>
+    </ul>
+
+    <p class="note-shipret">Please note that delivery times are estimates and may vary depending on factors such as product availability, destination, and carrier delay.</p>
+
+    <h2 class="head-shipret">Returns policy</h2>
+    <p class="para-shipret">We want you to be completely satisfied with your purchase from our website. If for any reason you are not entirely happy with your order, we're here to help. Certain exclusions and conditions may apply, so we encourage you to review our detailed return policy for more information. Rest assured, our goal is to ensure your complete satisfaction with every purchase you make from our website.</p>
+
+    <ol class="olist-shipret">
+      <li>Returned items must be unused, undamaged, and in the same condition as received.</li>
+      <li>Original tags, labels, and packaging must be intact and included with the returned item.</li>
+      <li>Proof of purchase, such as your order confirmation or receipt, is required for all returns.</li>
+    </ol>
+  </div>
+  </div>
+
+  <div id="CustomTab5" class="custom-tab-panel">
+    <h3>Tab 5</h3>
+    <p>Content for Tab 5.</p>
+  </div>
+  </div>
+  <!-- You might also like -->
+  <div class="main-product-arrvial">
+    <div class="container">
+    <div class="product-heading-arrival">
+      <h3>You might also like</h3>
+    </div>
+    <div class="product-box-main">
+      <div class="product-card">
+        <div class="image-wrapper">
+          <img src="images/fastrack-tick-tock-quartz-multifunction-watch (1).jpg" class="main-img" alt="Watch Front">
+          <img src="images/fastrack-tick-tock-quartz-multifunction-watch.jpg" class="hover-img" alt="Watch Back">
+        </div>
+        <h4 class="shop-name">QuickCart</h4>
+        <a href="#" class="product-name">Fastrack Tick Tock Quartz Multifunction Watch</a>
+        <div class="rating">★★★★★</div>
+        <div class="price">$49.00</div>
+      </div>
+      <div class="product-card">
+        <div class="image-wrapper">
+          <img src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" class="main-img" alt="Watch Front">
+          <img src="images/day-date-softest-silicone-strap-analog-watch.jpg" class="hover-img" alt="Watch Back">
+        </div>
+        <h4 class="shop-name">QuickCart</h4>
+        <a href="#" class="product-name">Fastrack Tick Tock Quartz Multifunction Watch</a>
+        <div class="rating">★★★★★</div>
+        <div class="price">$49.00</div>
+      </div>
+      <div class="product-card">
+        <div class="image-wrapper">
+          <img src="images/fastrack-tees-quartz-analog-silicone-strap-watch (1).jpg" class="main-img" alt="Watch Front">
+          <img src="images/fastrack-tees-quartz-analog-silicone-strap-watch.jpg" class="hover-img" alt="Watch Back">
+        </div>
+        <h4 class="shop-name">QuickCart</h4>
+        <a href="#" class="product-name">Fastrack Tick Tock Quartz Multifunction Watch</a>
+        <div class="rating">★★★★★</div>
+        <div class="price">$49.00</div>
+      </div>
+      <div class="product-card">
+        <div class="image-wrapper">
+          <img src="images/fastrack-stunners-quartz-rose-gold-watch (1).jpg" class="main-img" alt="Watch Front">
+          <img src="images/fastrack-stunners-quartz-rose-gold-watch.jpg" class="hover-img" alt="Watch Back">
+        </div>
+        <h4 class="shop-name">QuickCart</h4>
+        <a href="#" class="product-name">Fastrack Tick Tock Quartz Multifunction Watch</a>
+        <div class="rating">★★★★★</div>
+        <div class="price">$49.00</div>
+      </div>
+      <div class="product-view-more-btn">
+        <a href="#" class="product-btn"><span>View More</span></a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+<script src="js/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("defaultCustomTab").click();
+});
+</script>
+    
+</body>
+</html>

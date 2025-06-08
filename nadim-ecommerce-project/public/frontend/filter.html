@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nadim E-Commerce Project</title>
+  <link rel="stylesheet" href="css/filter.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <!-- Header -->
+  <div class="upperheader">
+    <div class="container">
+      <div class="upperheader-box">
+        <div class="socialmedia-upper">
+          <a href="#"><i class="fa-brands fa-whatsapp"></i>+91 97824 73777</a>
+          <a href="#"><i class="fa-regular fa-envelope"></i>titanbharatpur@gmail.com</a>
+        </div>
+        <div class="socialmedia-upper">
+          <a href="#"><i class="fa-solid fa-location-dot"></i>Find a Store</a>
+        </div>
+      </div>  
+    </div>
+  </div>
+  <header class="navbar">
+    <button class="hamburger" id="menuToggle">☰</button>
+    <div class="logo"><a href="#"><img src="images/c2 logo 2-01.png" alt=""></a></div>
+    <nav class="menu" id="navMenu">
+      <ul>
+        <li><a href="#">Brands<i class="fa-solid fa-angle-down"></i></a>  
+          
+        </li>
+        <li><a href="#">Accessories<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Watch Finder<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Smart Watch<i class="fa-solid fa-angle-down"></i></a></li>
+        <li><a href="#">Special Offer<i class="fa-solid fa-angle-down"></i></a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <!-- Watchlist Icon -->
+       <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button id="watchlistBtn"><i class="fa-solid fa-heart"></i></button>
+      <!-- Cart Icon -->
+      <button id="cartBtn" title="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
+      <div class="profile-dropdown-wrapper">
+        <button id="profileBtn" title="Profile">
+          <i class="fa-solid fa-user"></i>
+        </button>
+        <div class="profile-dropdown" id="profileDropdown">
+          <a href="/login">Login</a>
+          <a href="/register">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="searchBar" class="hidden">
+    <input type="text" placeholder="Search..." />
+  </div>
+  <div id="watchlist" class="hidden">
+    <p>Watchlist is empty.</p>
+  </div>
+  <!-- Header end -->
+    <div class="main-arrvial-box-heading">
+    <h4>Montblanc Pen</h4>
+    <div class="link-home-page">
+        <a href="#">Home </a>
+        <i class="fa-solid fa-angle-right"></i> 
+        <p>Montblanc Pen</p>
+    </div>
+    </div>
+    <div class="container">
+    <div class="main-filter-boxes">
+        <div class="filters-boxes-first">
+            <h2>Filters</h2>
+            <div class="filter-section">
+                <div class="section-header" onclick="toggleSection('genderSection')">
+                    <span>Gender</span>
+                    <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div id="genderSection" class="section-content">
+                    <label>
+                        <input type="checkbox" />
+                        Unisex (11)
+                    </label>
+                </div>
+            </div>
+            <div class="filter-section">
+                <div class="section-header" onclick="toggleSection('priceSection')">
+                    <span>Price</span>
+                    <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <div id="priceSection" class="section-content">
+                    <div class="slider-container">
+                        <input type="range" id="minRange" min="0" max="65100" value="0" />
+                        <input type="range" id="maxRange" min="0" max="65100" value="65100" />
+                    </div>
+                    <div class="price-inputs">
+                        <div>
+                            ₹ <input type="number" id="minInput" value="0" min="0" max="65100" />
+                        </div>
+                        <span>To</span>
+                        <div>
+                            ₹ <input type="number" id="maxInput" value="65100" min="0" max="65100" />
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="products-watch">
+            <div class="layout-toolbar">
+                <div class="filter-selct">
+                    <select>
+                    <option value="">Best selling</option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                    <option value="">1</option>
+                </select>
+                </div>
+                <div>
+                    <button class="layout-button active" onclick="switchLayout(2)">2 </button>
+                    <button class="layout-button" onclick="switchLayout(3)">3 </button>
+                    <button class="layout-button" onclick="switchLayout(4)">4 </button>
+                    <button class="layout-button" onclick="switchLayout(5)">5 </button>
+                </div>
+            </div>
+        
+            <div id="productGrid" class="product-grid columns-2">
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img class="product-image default-img" src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch">
+                        <img class="product-image hover-img" src="images/day-date-softest-silicone-strap-analog-watch.jpg" alt="Watch Side View">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Titan Karishma Analog Watch For Men...</h3>
+                        <div class="product-price">
+                            <span class="current-price">₹ 1,796</span>
+                            <span class="original-price">₹ 1,995</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+
+    </div>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

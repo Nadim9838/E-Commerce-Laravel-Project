@@ -1,0 +1,85 @@
+
+  <div class="main-arrvial-box-heading">
+    <h4>Register</h4>
+    <div class="link-home-page">
+      <a href="#">Home </a>
+      <i class="fa-solid fa-angle-right"></i> 
+      <p>Register</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="form-box">
+      <p>Already have an account? <a href="#">Log in instead!</a></p>
+
+      <div class="form-group">
+        <label>Social title</label>
+        <label><input type="radio" name="social-title"> Mr.</label>
+        <label><input type="radio" name="social-title"> Mrs.</label>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Enter Full Name</label>
+        <input type="text" id="last-name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" />
+      </div>
+      <div class="form-group">
+       <button type="submit" class="save-btn">Save</button>
+      </div>
+
+
+    </div>
+  </div>
+    <script>
+        const searchBtn = document.getElementById("searchBtn");
+        const watchlistBtn = document.getElementById("watchlistBtn");
+        const searchBar = document.getElementById("searchBar");
+        const watchlist = document.getElementById("watchlist");
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        searchBtn.addEventListener("click", () => {
+        searchBar.classList.toggle("hidden");
+        watchlist.classList.add("hidden");
+        });
+
+        watchlistBtn.addEventListener("click", () => {
+        watchlist.classList.toggle("hidden");
+        searchBar.classList.add("hidden");
+        });
+
+        menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        });
+  </script>
+<script>
+  const profileBtn = document.getElementById("profileBtn");
+  const dropdown = document.getElementById("profileDropdown");
+
+  profileBtn.addEventListener("click", () => {
+    dropdown.style.display = dropdown.style.display === "flex" ? "none" : "flex";
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>

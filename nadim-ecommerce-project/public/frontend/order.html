@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nadim E-Commerce Project</title>
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+    <header class="checkout-header">
+        <a href="#"><img src="images/c2 logo 2-01.png" alt=""></a>
+    </header>
+    <div class="container">    
+        <div class="checkout-body">
+            <!-- Contact & Delivery -->
+            <section class="checkout-form">
+                <h2>Contact</h2>
+                <input type="email" placeholder="Email" />
+                <label class="form-checkbox">
+                    <input type="checkbox" class="not-fill" checked />Email me with news and offers
+                </label>
+                <h2 class="Delivery-point">Delivery</h2>
+                <select>
+                    <option>India</option>
+                </select>
+                <div class="form-name-fields">
+                    <input type="text" placeholder="First name (optional)">
+                    <input type="text" placeholder="Last name">
+                </div>
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Apartment, suite, etc. (optional)">
+                <div class="form-location-fields">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State">
+                    <input type="text" placeholder="PIN code">
+                </div>
+                 <input type="tel" placeholder="Phone">
+                <label class="form-checkbox">
+                <input type="checkbox" class="not-fill"/> Save this information for next time
+                </label>
+                <label class="form-checkbox">
+                <input type="checkbox" class="not-fill" /> Text me with news and offers
+                </label>
+                <h2 class="Delivery-point">Shipping method</h2>
+                <div class="shipping-method-box">
+                Enter your shipping address to view available shipping methods.
+                </div>
+                <h2 class="Delivery-point">Payment</h2>
+                <p class="transactions-secure">All transactions are secure and encrypted.</p>
+                <div class="custom-payment-box">
+                <div class="custom-payment-header">
+                    <span class="custom-payment-title">
+                        Razorpay Secure (UPI, Cards, Wallets, NetBanking)
+                    </span>
+                    <div class="custom-payment-icons">
+                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa"/>
+                        <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="MasterCard" />
+                        <img src="https://img.icons8.com/color/48/000000/rupay.png" alt="RuPay"/>
+                        <!-- Hover trigger -->
+                        <div class="icon-count">+16
+                            <!-- Hidden popup -->
+                            <div class="extra-icons-popup">
+                                <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" />
+                                <img src="https://img.icons8.com/color/48/000000/apple-pay.png" alt="Apple Pay" />
+                                <img src="https://img.icons8.com/color/48/000000/google-pay-india.png" alt="Google Pay" />
+                                <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover" />
+                                <!-- Add more if needed -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-payment-body">
+                    <img src="https://img.icons8.com/ios-filled/100/000000/internet.png" alt="Redirect" />
+                    <p>
+                    After clicking “Pay now”, you will be redirected to Razorpay Secure (UPI, Cards, Wallets, NetBanking) to complete your purchase securely.
+                    </p>
+                </div>
+                </div>
+                <h2 class="Delivery-point">Shipping method</h2>
+                <div class="billing-options">
+                    <label>
+                        <input class="not-fill" type="radio" name="billing" value="same" checked onclick="toggleBilling(false)">
+                        Same as shipping address
+                    </label>
+                    <label>
+                        <input type="radio" class="not-fill" name="billing" value="different" onclick="toggleBilling(true)">
+                        Use a different billing address
+                    </label>
+                </div>
+                <div class="billing-form" id="billingForm" style="display: none;">
+                <!-- your existing form here -->
+                <select>
+                    <option>Gabon</option>
+                </select>
+                <input type="text" placeholder="First name (optional)">
+                <input type="text" placeholder="Last name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Apartment, suite, etc. (optional)">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="Phone (optional)">
+                </div>
+                 <a href="#" class="pay-now-btn">Pay Now</a>
+            </section>
+            <!-- Order Summary -->
+            <section class="checkout-summary">
+                <div class="summary-product">
+                    <img src="images/day-date-softest-silicone-strap-analog-watch (1).jpg" alt="Watch Image">
+                    <div class="summary-details">
+                        <p><strong>BALMAIN Classic R B41013162 Watch for Men</strong></p>
+                        <p>₹1,35,600.00</p>
+                    </div>
+                </div>
+                <div class="summary-discount">
+                    <input type="text" placeholder="Discount code or gift card">
+                    <button onclick="applyDiscount()">Apply</button>
+                </div>
+                <div class="summary-total">
+                    <p>Subtotal: <span>₹1,35,600.00</span></p>
+                    <p>Shipping: <span>Enter shipping address</span></p>
+                    <h3>Total: <span>₹1,35,600.00</span></h3>
+                    <small>Including ₹20,684.75 in taxes</small>
+                </div>
+            </section>
+        </div>
+       
+    </div>
+
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
