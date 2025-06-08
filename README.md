@@ -13,24 +13,6 @@
 
 ---
 
-## 🚀 Live Demo
-
-**🔗 [Visit Live Site](#)** *(Add your hosted link here, or remove this section if none)*
-
----
-
-## 📸 Screenshots
-
-> _You can replace these with actual screenshots from your project._
-
-<p align="center">
-  <img src="screenshots/homepage.png" alt="Homepage" width="600" />
-  <img src="screenshots/product-detail.png" alt="Product Detail" width="600" />
-  <img src="screenshots/cart.png" alt="Cart Page" width="600" />
-</p>
-
----
-
 ## 🔧 Built With
 
 - ⚙️ **Laravel** — Used Eloquent ORM, Middleware, Observers
